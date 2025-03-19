@@ -54,21 +54,71 @@ header {
     font-weight: bold;
 }
 
+/* Estilos mejorados para el menú hamburguesa en móvil */
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.mobile-menu a:hover {
+    background: #f0f0f0;
+    border-radius: 5px;
+    color: #002b80;
 }
 
 .menu-icon {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .mobile-menu {
+        display: block;
+    }
 }
 
 /* Estilos para el selector de ordenamiento */
